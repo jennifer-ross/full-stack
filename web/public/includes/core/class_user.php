@@ -18,7 +18,7 @@ class User {
             return [
                 'id' => (int) $row['user_id'],
                 'access' => (int) $row['access'],
-                'number' => $row['plot_id'],
+                'plot_id' => $row['plot_id'],
                 'first_name' => $row['first_name'],
                 'last_name' => $row['last_name'],
                 'phone_str' => phone_formatting($row['phone']),
@@ -28,7 +28,7 @@ class User {
             return [
                 'id' => 0,
                 'access' => 0,
-                'number' => 0,
+                'plot_id' => 0,
                 'first_name' => 0,
                 'last_name' => 0,
                 'phone_str' => 0,
@@ -86,7 +86,7 @@ class User {
         while ($row = DB::fetch_row($q)) {
             $items[] = [
                 'id' => (int) $row['user_id'],
-                'number' => $row['plot_id'],
+                'plot_id' => $row['plot_id'],
                 'first_name' => $row['first_name'],
                 'last_name' => $row['last_name'],
                 'phone_str' => phone_formatting($row['phone']),
